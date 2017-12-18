@@ -1,0 +1,52 @@
+<nav>
+    <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Travel Book</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a class="loginstuff" href="/user">Users</a></li>
+        <li><a  class="loginstuff" href="/add">Add Post</a></li>
+        <li><a class="loginstuff saved">My Posts</a></li>
+       <li><a class="loginstuff future">My Travel Book</a></li>
+        <li><a href="/">Plan New Trip</a></li>
+        <li><a class="login">Login</a></li>
+          <li><a class="logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    {{!-- page title --}}
+    <div class="row center-align">
+
+     
+          <h1>Users</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                
+                <th>Name:</th>
+                <th># of Posts:</th>
+                <th>See User's Posts</th>
+                <th>See User's Travel Book</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="form-row">
+                <form id="author-form">
+                 {{#each data.daty}}
+                  <td> {{username}}</td>
+                  <td>#</td>
+                  <td>Link To Posts</td>
+                  <td>Link To Travel Book</td>
+                  </tr>
+                  {{/each}}
+                </form>
+              
+            </tbody>
+          </table>
+     
+      </div>
+    
+</div>
+<!-- <script src="js/author.js" type="text/javascript"></script> -->
+
+{{>login}}
